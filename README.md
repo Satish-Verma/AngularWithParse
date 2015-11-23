@@ -16,8 +16,9 @@ Demo to integrate Parse.com Data Services with AngularJS
   
   'Created At' and 'ObjectID' will be automatically generated.
   
+![ScreenShot] (https://github.com/Satish-Verma/AngularWithParse/blob/AngularWithParse_DEV/screenshots/parse_dashboard.png) 
   
-#Add data to Parse.com
+#Integrate with Angular.js
 > Include the required libraries in your <HEAD> section:
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
    <script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
@@ -56,6 +57,6 @@ Demo to integrate Parse.com Data Services with AngularJS
   
   -  call query.find(fn()); to send query.
   
-
+![ScreenShot] (https://github.com/Satish-Verma/AngularWithParse/blob/AngularWithParse_DEV/screenshots/angular_demo.png)
 		   
   
