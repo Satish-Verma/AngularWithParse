@@ -1,0 +1,90 @@
+.div-table{
+  		display:inline-block;         
+  		width:auto;         
+ 		background-color:#eee;         
+  		border:1px solid  #666666;       
+  		margin-left: 300px;  
+  		border-spacing:5px;/*cellspacing:poor IE support for  this*/
+  		margin-top: 20px;
+	}
+.div-table-row{
+  		display:table-row;
+  		width:auto;
+  		clear:both;
+	}
+.div-table-col{
+  		float:left;
+  		display:table-column;         
+  		width:200px;   
+  		 text-align:center;      
+  		background-color:#ccc;  
+  		border: 1px solid #004080;
+	}
+.div-table-col i{
+	padding:5px;
+ 
+	}
+.div-table-col-data{
+  		float:left;
+  		display:table-column;         
+  		width:200px;     
+  		 text-align:center;    
+  		background-color:#ffff;  
+  		
+	}
+	
+div.postSection{
+	margin-top: 30px;
+	display:block;
+	margin-left: 300px;  
+}	
+
+.postSection  input[type="text"], input[type="number"]{
+    width: 250px;
+    height: 30px;
+    margin:10px;
+    text-align:center;
+    border: 1px solid #004080;
+    border-radius:20px;
+}
+
+.postSection  input[type="button"]{
+    height: 30px;
+    margin:10px;
+    text-align:center;
+    border: 1px solid #004080;
+    border-radius:20px;
+    padding : 5px 15px 5px 15px;
+}
+
+ .error span{
+    display: inherit;
+    color: red;
+    margin-left:150px;
+    text-align:center;
+    border: 2px solid #ff0000; 
+    width: 200px;
+}
+
+.group-tab {
+	margin-left:300px;
+	font-family : FontAwesome;
+	position:inline-block;
+	
+}
+
+.group-tab a{
+	background-color: #5298fc;
+	padding : 5px 35px 5px 15px;
+	width:180px;
+	border: 1px solid #5298fc;
+	text-decoration: none !important;
+	border-radius:20px;
+}
+
+.group-tab a:hover{
+	cursor: pointer;
+	cursor: hand;
+	color: white;
+	text-decoration: '';
+	}

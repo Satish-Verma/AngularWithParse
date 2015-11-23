@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script> -->
+<script src="libs/angular.js"></script>
+<script src="libs/parse-1.2.12.min.js"></script>
+<script src="app.js"></script>
+ <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fonts/font-awesome.css">
+<meta charset=utf-8 />
+<title>Parse Angular Demo</title>
+</head>
+<body ng-app="AuthApp">
+
+<h2>Eros Now Demo for Accessing Data from Parse.com</h2><hr/>
+<br/>
+<div class="group-tab">
+   <a href="#" ng-click="choice=1;clearError();" ><i class="fa fa-user-plus"></i><span class="button" > Add</span></a>
+   <a href="#" ng-click="choice=2;"><i class="fa fa-search" ></i><span class="button"> Search By Name</span></a>
+   <a href="#" ng-click="choice=3;clearError();fetch()"><i class="fa fa-align-justify"></i><span class="button"> Fetch All Data</span></a>
+</div>
+<form name="myForm">
+<div ng-show="choice==1" class="postSection">
+	<span><b>Add Data to LeaderBoard</b> (Sending this leaderboard to Parse Data)</span><br/>
+	<div ng-show="errors.length>0" class ="error"  >
+	    	<span ng-repeat= "er in errors  track by $index">> {{er}}</span>
+	</div>
+	<input type="text" ng-model="postLeaderBoard.Name" placeholder="Enter Name" name="name" required/>	
+	<input type="number" ng-model="postLeaderBoard.Score" placeholder="Enter Score" name="score" required/>
+	<input type="button" ng-click="sendToParse()"
+	    value="Submit to Server"/><br/>
+	    
+	
+</div>
+<div ng-show="choice==2" class="postSection">
+	<span><b>Search Data to LeaderBoard</b> (By Name)</span><br/>
+	<div ng-show="errors.length>0" class ="error"  >
+	    	<span ng-repeat= "er in errors  track by $index">> {{er}}</span>
+	</div>
+	<input type="text" ng-model="postLeaderBoard.Name" placeholder="Enter Name" name="name" required/>	
+	<input type="button" ng-click="sendQuery()"
+	    value="Search {{postLeaderBoard.Name}}"/><br/>
+	    
+	
+</div>
+
+</form>
+<div class="div-table">
+             <div class="div-table-row">
+                <div  class="div-table-col" ><i class="fa fa-list-ul"></i></div>
+                <div  class="div-table-col" ><i class="fa fa-user"></i><span> </span></div>
+                <div  class="div-table-col"  ><i class="fa fa-500px"></i> (Score)</div>
+             </div>
+ <div ng-repeat="la in leaderboard | orderBy:'-Score'" class="div-table-row">
+ 	<span class="div-table-col-data">{{ $index+1 }}</span>&nbsp;&nbsp;&nbsp;
+ 	<span class="div-table-col-data">{{la.Name}}</span>&nbsp;&nbsp;&nbsp;
+ 	<span class="div-table-col-data">{{la.Score}}</span>
+ </div>
+ </div>
+
+</body>
+</html>
